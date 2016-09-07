@@ -14,18 +14,17 @@ export default (file, options = {}, application) => {
 		{scripts: [{path: 'react-mount', id: file.pattern.id}]} : {};
 
 	try {
-		const logError = console.error;
+		const original = console.error;
 
 		console.error = (...args) => {
 			const message = args.join(' ');
 			if (message.includes('Expected props argument to be a plain object')) {
 				return;
 			}
-			logError(...args);
+			original(...args);
 		};
 
 		const result = renderFunction(React.createElement(component));
-		delete console.error;
 
 		const buffer = options.automount ?
 			`<div data-mountpoint>${result}</div>` :
