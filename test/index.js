@@ -1,7 +1,5 @@
 import test from 'ava';
 import expect from 'unexpected';
-import semver from 'semver';
-import React from 'react';
 
 import * as helpers from './_helpers';
 import * as mocks from './_mocks';
@@ -83,25 +81,19 @@ test('logging component', async () => {
 	expect(warnings, 'to equal', expected);
 });
 
-test.only('faulty props', async t => {
-	const release = helpers.trap();
+test('faulty props', async t => {
 	const transform = factory(mocks.application);
 	const {buffer: actual} = await transform(mocks.faultyProps);
 	const expected = '<div id="same" class="other">same</div>';
 	t.is(actual, expected, 'yields output with faulty props stripped');
-
-	// [1], [2]
-	if (semver.satisfies(React.version, '>=15.2.0') && React.version !== '15.3.1') {
-		const {errors} = release();
-		expect(errors, 'not to be empty');
-		expect(errors, 'to have length', 3);
-	}
 });
 
 test('missing dependencies', async () => {
-	const transform = factory(mocks.application);
 	const file = mocks.missinDependencies;
-	expect(async () => await transform(file), 'to be rejected with', new Error(`Could not find module 'dependency' from '${file.path}'`));
+	const transform = factory(mocks.application);
+
+	const [error] = await helpers.nodeish(transform, file);
+	expect(error.message, 'to contain', `Can not find module 'dependency' from '${file.path}'`);
 });
 
 test('faulty component without sourcemaps', async () => {
@@ -113,8 +105,3 @@ test('faulty component without sourcemaps', async () => {
 	expect(error.message, 'to contain', file.pattern.id);
 	expect(error.fileName, 'to be', file.path);
 });
-
-/**
- * [1]: Unknown prop warnings have been introduced in React v15.2.0
- * [2]: Some warnings appear to be broken in React v15.3.1 https://github.com/facebook/react/issues/7674
- */
