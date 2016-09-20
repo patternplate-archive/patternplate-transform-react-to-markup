@@ -87,7 +87,7 @@
     "jsonlint-cli": "1.0.1",
     "parallelshell": "2.0.0",
     "react": "15.3.1",
-    "react-dom": "15.3.1",
+    "react-dom": "15.3.2",
     "unexpected": "10.17.0"
   },
   "peerDependencies": {
