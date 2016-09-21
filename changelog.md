@@ -1,3 +1,13 @@
+<a name="0.3.8"></a>
+## [0.3.8](https://github.com/sinnerschrader/patternplate-transform-react/compare/v1.0.0...v0.3.8) (2016-09-21)
+
+
+### Bug Fixes
+
+* avoid Array.prototype.find for interop with patternplate < 1 ([#10](https://github.com/sinnerschrader/patternplate-transform-react/issues/10)) ([364c30b](https://github.com/sinnerschrader/patternplate-transform-react/commit/364c30b))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/sinnerschrader/patternplate-transform-react/compare/v0.3.7...v1.0.0) (2016-09-20)
 
