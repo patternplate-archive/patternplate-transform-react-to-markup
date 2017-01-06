@@ -95,7 +95,7 @@
     "husky": "0.11.9",
     "parallelshell": "2.0.0",
     "react": "15.4.1",
-    "react-dom": "15.4.1",
+    "react-dom": "15.4.2",
     "unexpected": "10.21.0",
     "xo": "0.17.1"
   },
