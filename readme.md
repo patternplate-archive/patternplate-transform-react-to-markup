@@ -1,5 +1,7 @@
 # patternplate-transform-react-to-markup
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sinnerschrader/patternplate-transform-react-to-markup.svg)](https://greenkeeper.io/)
+
 [patternplate](/sinnerschrader/patternplate)
 transform creating markup from react components.
 
