@@ -1,3 +1,19 @@
+<a name="1.1.0-1"></a>
+# [1.1.0-1](https://github.com/sinnerschrader/patternplate-transform-react-to-markup/compare/v1.0.2...v1.1.0-1) (2017-05-11)
+
+
+### Bug Fixes
+
+* log pattern on failure ([e8d76a7](https://github.com/sinnerschrader/patternplate-transform-react-to-markup/commit/e8d76a7))
+* use correct repository url ([a655eaf](https://github.com/sinnerschrader/patternplate-transform-react-to-markup/commit/a655eaf))
+
+
+### Features
+
+* inject third party content as resource into app ([3b591d4](https://github.com/sinnerschrader/patternplate-transform-react-to-markup/commit/3b591d4))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/sinnerschrader/patternplate-transform-react-to-markup/compare/v1.0.2...v1.0.3) (2017-05-11)
 
