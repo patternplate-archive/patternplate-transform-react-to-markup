@@ -1,3 +1,7 @@
+> # ⚠️ Deprecated
+> Use instead: https://patternplate.github.io/
+
+
 # patternplate-transform-react-to-markup
 
 [patternplate](/sinnerschrader/patternplate)
